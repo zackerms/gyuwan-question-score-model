@@ -16,8 +16,6 @@ flowchart TB
     end
 
     subgraph Encoder["Universal Sentence Encoder"]
-        direction TB
-        embed["文章エンコーディング(512)"]
     end
 
     subgraph MLP["MLP"]
@@ -29,8 +27,8 @@ flowchart TB
     end
 
     text --> Encoder
-    Encoder --> MLP
-    MLP --> score
+    Encoder -->|Encoding（512）| MLP
+    MLP --> Output 
 ```
 
 ## 損失関数

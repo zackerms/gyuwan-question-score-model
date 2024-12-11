@@ -1,3 +1,4 @@
 .env.local
 
 /**/wandb/
+data/saved_models/question_score/**/*-epoch=*.ckpt
